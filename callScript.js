@@ -48,7 +48,7 @@ function makeCall(number, message) {
   console.log("making a call");
   client.makeCall({
     to: number,
-    from: '1-855-801-9658',
+    from: configTwilio.TwilioNumber,
     url: '/call'
   });
 }
@@ -67,7 +67,7 @@ function sendText(number, message) {
   console.log("sending a text");
   client.sms.messages.create({
     to: number,
-    from: '1-855-801-9658',
+    from: configTwilio.TwilioNumber,
     body: message
   }, function(error, message) {
     if (!error) {
