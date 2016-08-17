@@ -1,3 +1,6 @@
+//settings
+var cost = 100000000000; // this equals 0.1 Monero
+//requirements 
 var moneroWallet = require('./lib/wallet');
 var Wallet = new moneroWallet();
 var mongoose = require('mongoose');
@@ -29,7 +32,7 @@ function checkCalls() {
         result.payments.forEach(function(payment) {
           paidBalance += payment.amount;
         });
-        if (paidBalance >= 100000000000) {
+        if (paidBalance >= cost) {
           if (call.type == "text") {
             sendText(call.number, call.message);
             markCalled(call.paymentID);
