@@ -1,0 +1,21 @@
+{
+  "name": "monero-phone",
+  "version": "0.1",
+  "description": "a twilio app using monero node.js",
+  "main": "./lib/wallet.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "crypto": "0.0.3",
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.8",
+    "twilio": "^2.9.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "should": "^8.3.0"
+  }
+}

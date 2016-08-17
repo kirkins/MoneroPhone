@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Monero Payphone</title>
+  <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+  <center>
+    <h1>Monero Payphone</h1>
+      <p>Send a text <s>or automated voice call</s> for 0.1 Monero</p>
+    <form action="/submit" id="callForm" method="post" name="callForm">
+      Phone Number: <br/><input name="phoneNumber" type="text"><br>
+      Message: <br/>
+      <textarea name="textMsg"></textarea><br>
+      <select id="typeSelect" name="type" class="hidden">
+        <option value="text">
+          text
+        </option>
+        <option value="call">
+          call
+        </option>
+      </select> <input id="payIdinput" maxlength="64" name="paymentID" type=
+      "text" value="<%- randomId %>"> <input id="submitBtn" type="submit"
+      value="Submit">
+    </form>
+  </center>
+</body>
+</html>

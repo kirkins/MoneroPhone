@@ -1,0 +1,15 @@
+var mongoose = require('mongoose');
+
+// Create a schema to store message data
+var callSchema = new mongoose.Schema({
+    sid:String, 
+    number:String, 
+    message:String, 
+    paymentID:String,
+    type:String,
+    date:{ type: Date, default: Date.now },
+    called:{ type: Boolean, default: false }
+});
+
+// Public module interface is a Message model object
+module.exports = mongoose.model('Call', callSchema);
