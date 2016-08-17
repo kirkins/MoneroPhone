@@ -1,4 +1,4 @@
 module.exports = {
-	'AccountSid'	: '',
-    'AuthToken'	: ''
+  'AccountSid'	: '',
+  'AuthToken'	: ''
 }
